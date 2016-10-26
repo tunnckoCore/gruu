@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "always-done": "^1.0.1",
-    "async": "^1.5.2",
+    "async": "^2.1.2",
     "eventemitter3": "^2.0.2",
     "extend-shallow": "^2.0.1",
     "forward-object": "^0.1.1",
