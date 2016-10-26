@@ -41,6 +41,7 @@
     "standard-version": "^3.0.0"
   },
   "files": [
+    "api.js",
     "index.js",
     "utils.js"
   ],
