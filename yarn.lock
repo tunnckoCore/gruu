@@ -86,19 +86,12 @@ arr-flatten@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/arr-flatten/-/arr-flatten-1.0.1.tgz#e5ffe54d45e19f32f216e91eb99c8ce892bb604b"
 
-arr-includes@^1.0.1:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/arr-includes/-/arr-includes-1.0.2.tgz#640f5d099e300536892708b25383ff2be2b7cb54"
-  dependencies:
-    in-array "^0.1.2"
-    isarray "^1.0.0"
-    lazy-cache "^2.0.1"
-
-arr-map@^2.0.0:
+arr-includes@^2.0.0:
   version "2.0.0"
-  resolved "https://registry.yarnpkg.com/arr-map/-/arr-map-2.0.0.tgz#d381f593c67035687908042b0ee98d0c05bf1d4f"
+  resolved "https://registry.yarnpkg.com/arr-includes/-/arr-includes-2.0.0.tgz#dc5c32b9f735380cd75622ca07391648ca260a53"
   dependencies:
-    make-iterator "^0.1.1"
+    lazy-arrayify "^1.0.3"
+    lazy-cache "^2.0.1"
 
 array-find-index@^1.0.1:
   version "1.0.2"
@@ -238,8 +231,8 @@ babel-types@^6.16.0, babel-types@^6.18.0:
     to-fast-properties "^1.0.1"
 
 babylon@^6.11.0, babylon@^6.13.0:
-  version "6.13.0"
-  resolved "https://registry.yarnpkg.com/babylon/-/babylon-6.13.0.tgz#58ed40dd2a8120612be5f318c2c0bedbebde4a0b"
+  version "6.13.1"
+  resolved "https://registry.yarnpkg.com/babylon/-/babylon-6.13.1.tgz#adca350e088f0467647157652bafead6ddb8dfdb"
 
 balanced-match@^0.4.1:
   version "0.4.2"
@@ -1075,7 +1068,7 @@ for-in@^0.1.5:
   version "0.1.6"
   resolved "https://registry.yarnpkg.com/for-in/-/for-in-0.1.6.tgz#c9f96e89bfad18a545af5ec3ed352a1d9e5b4dc8"
 
-for-own@^0.1.1, for-own@^0.1.3:
+for-own@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/for-own/-/for-own-0.1.4.tgz#0149b41a39088c7515f51ebe1c1386d45f935072"
   dependencies:
@@ -1114,11 +1107,9 @@ fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/fs.realpath/-/fs.realpath-1.0.0.tgz#1504ad2523158caa40db4a2787cb01411994ea4f"
 
-function-arguments@^1.0.5:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/function-arguments/-/function-arguments-1.0.6.tgz#bc75b02a5f5ac6ce8a7b53de5bc9b51681304580"
-  dependencies:
-    arr-map "^2.0.0"
+function-arguments@^1.0.6:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/function-arguments/-/function-arguments-1.0.7.tgz#288eb61c99f779093ed939dab0fd57e002e86ec5"
 
 generate-function@^2.0.0:
   version "2.0.0"
@@ -1341,10 +1332,6 @@ imurmurhash@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/imurmurhash/-/imurmurhash-0.1.4.tgz#9218b9b2b928a238b13dc4fb6b6d576f231453ea"
 
-in-array@^0.1.2:
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/in-array/-/in-array-0.1.2.tgz#1a2683009177ab914ade0620a35c5039851f3715"
-
 indent-string@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/indent-string/-/indent-string-2.1.0.tgz#8e2d48348742121b4a8218b7a137e9a52049dc80"
@@ -1417,13 +1404,13 @@ is-arrayish@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/is-arrayish/-/is-arrayish-0.2.1.tgz#77c99840527aa8ecb1a8ba697b80645a7a926a9d"
 
-is-async-function@^1.1.5:
-  version "1.1.5"
-  resolved "https://registry.yarnpkg.com/is-async-function/-/is-async-function-1.1.5.tgz#3863ab5cc2ce35feaefe6372129f2bdf1a8d5432"
+is-async-function@^1.1.5, is-async-function@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/is-async-function/-/is-async-function-1.2.0.tgz#468a5dc74185d9e3e684e30172bdbed71dffeb7f"
   dependencies:
-    arr-includes "^1.0.1"
+    arr-includes "^2.0.0"
     common-callback-names "^1.0.2"
-    function-arguments "^1.0.5"
+    function-arguments "^1.0.6"
     lazy-arrayify "^1.0.3"
     lazy-cache "^2.0.1"
 
@@ -1845,12 +1832,6 @@ lru-cache@^4.0.0, lru-cache@^4.0.1:
     pseudomap "^1.0.1"
     yallist "^2.0.0"
 
-make-iterator@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/make-iterator/-/make-iterator-0.1.1.tgz#873d27b8198a465a81483b6f5d16da4e863ecf5b"
-  dependencies:
-    for-own "^0.1.1"
-
 map-obj@^1.0.0, map-obj@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/map-obj/-/map-obj-1.0.1.tgz#d933ceb9205d82bdcf4886f6742bdc2b4dea146d"
@@ -2043,10 +2024,10 @@ object-assign@^4.0.1, object-assign@^4.1.0:
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.0.tgz#7a3b3d0e98063d43f4c03f2e8ae6cd51a86883a0"
 
 object.omit@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/object.omit/-/object.omit-2.0.0.tgz#868597333d54e60662940bb458605dd6ae12fe94"
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/object.omit/-/object.omit-2.0.1.tgz#1a9c744829f39dbb858c76ca3579ae2a54ebd1fa"
   dependencies:
-    for-own "^0.1.3"
+    for-own "^0.1.4"
     is-extendable "^0.1.1"
 
 on-stream-end@^1.0.0:
