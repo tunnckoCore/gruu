@@ -5,7 +5,7 @@
   "repository": "tunnckoCore/gruu",
   "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
   "precommit.silent": true,
-  "main": "index.js",
+  "main": "lib/index.js",
   "license": "MIT",
   "scripts": {
     "lint": "standard --verbose",
