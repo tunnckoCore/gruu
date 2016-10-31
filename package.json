@@ -1,6 +1,6 @@
 {
   "name": "gruu",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Modern, small and powerful test runner with TAP output and support for streams, promises, async/await and callbacks, built on [always-done][].",
   "repository": "tunnckoCore/gruu",
   "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
