@@ -7,7 +7,7 @@
 
 'use strict'
 
-// var fs = require('fs')
+var fs = require('fs')
 var assert = require('assert')
 
 // get it from `lib/index.js` it will be the
@@ -31,35 +31,35 @@ test(function sasa (next) {
   next()
 })
 
-// test.skip('four (skip)', function () {
-//   assert.strictEqual(2121, 2121)
+test.skip('four (skip)', function () {
+  assert.strictEqual(2121, 2121)
+})
+
+test('foo', function () {
+  assert.strictEqual(55, 55)
+})
+
+// test('six (async failing arg)', function (cb) {
+//   assert.strictEqual(123, 123)
 // })
 
-// test('foo', function () {
-//   assert.strictEqual(55, 55)
+test('bar', function () {
+  assert.strictEqual(33, 33)
+})
+
+// test('eight (sync fail)', function () {
+//   throw new Error('aloha')
 // })
 
-// // test('six (async failing arg)', function (cb) {
-// //   assert.strictEqual(123, 123)
-// // })
+test('nine', function () {
+  assert.strictEqual(2, 2)
+})
 
-// test('bar', function () {
-//   assert.strictEqual(33, 33)
-// })
+test.todo('ten (sync todo fail)', function () {
+  throw new Error('aloha', ctx) // eslint-disable-line no-undef
+})
 
-// // test('eight (sync fail)', function () {
-// //   throw new Error('aloha')
-// // })
-
-// test('nine', function () {
-//   assert.strictEqual(2, 2)
-// })
-
-// test.todo('ten (sync todo fail)', function () {
-//   throw new Error('aloha', ctx) // eslint-disable-line no-undef
-// })
-
-// test('eleven (async last)', function (callback) {
-//   assert.strictEqual(44, 44)
-//   fs.stat('./package.json', callback)
-// })
+test('eleven (async last)', function (callback) {
+  assert.strictEqual(44, 44)
+  fs.stat('./package.json', callback)
+})
