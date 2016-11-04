@@ -64,6 +64,14 @@
     ],
     "lint": {
       "reflinks": true
-    }
+    },
+    "related": {
+      "list": []
+    },
+    "reflinks": [
+      "always-done",
+      "ava",
+      "tape"
+    ]
   }
 }
