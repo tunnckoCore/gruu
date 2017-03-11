@@ -1,55 +1,56 @@
 {
   "name": "gruu",
   "version": "0.2.1",
-  "description": "Modern, small and powerful testing with TAP output and support for async/await, promises, callbacks, streams and observables, built on [always-done][].",
+  "description": "Microscopic test runner, built on Promises and ~100 SLoC. Modern, powerful and ES2017 ready.",
   "repository": "tunnckoCore/gruu",
-  "author": "Charlike Mike Reagent <@tunnckoCore> (http://www.tunnckocore.tk)",
+  "author": "Charlike Mike Reagent <@tunnckoCore> (https://i.am.charlike.online)",
   "precommit.silent": true,
-  "main": "lib/index.js",
+  "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "lint": "standard --verbose",
-    "pretest": "npm run lint",
-    "test": "npm run coverage",
-    "posttest": "npm run lint:coverage",
-    "coverage": "nyc node test.js",
-    "lint:coverage": "nyc check-coverage --lines 0 --branches 0 --statements 0 --functions 0",
-    "report-coverage": "nyc report --reporter=text-lcov | coveralls",
+    "lint": "standard index.js test.js --fix --verbose",
+    "test": "npm-run-all -s lint test:*",
+    "test:api": "nyc --reporter lcov node test.js",
+    "test:report": "nyc report",
     "prerelease": "npm test",
     "release": "standard-version --sign --no-verify",
-    "precommit": "git add --all",
-    "commit": "git-cz"
+    "git": "npm-run-all -s git:*",
+    "git:add": "git add --all",
+    "git:cz": "git-cz",
+    "commit": "npm-run-all -s test git"
   },
   "dependencies": {
-    "always-done": "^1.1.0",
-    "async": "^1.5.2",
-    "eventemitter3": "^2.0.2",
-    "extend-shallow": "^2.0.1",
-    "forward-object": "^0.1.1",
+    "arrify": "^1.0.1",
+    "dush": "^2.0.2",
     "get-fn-name": "^1.0.0",
-    "is-async-function": "^1.2.0",
-    "is-typeof-error": "^1.1.0",
-    "lazy-cache": "^2.0.1"
+    "p-finally": "^1.0.0",
+    "p-map": "^1.1.1",
+    "p-map-series": "^1.0.0",
+    "p-reflect": "^1.0.0"
   },
   "devDependencies": {
-    "commitizen": "^2.8.6",
-    "coveralls": "^2.11.12",
+    "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^1.2.0",
-    "mukla": "^0.4.4",
-    "nyc": "^8.1.0",
-    "pre-commit": "^1.1.3",
-    "standard": "^8.4.0",
-    "standard-version": "^3.0.0"
+    "mukla": "^0.4.8",
+    "npm-run-all": "^4.0.1",
+    "nyc": "^10.1.2",
+    "pre-commit": "^1.2.2",
+    "standard": "^9.0.0",
+    "standard-version": "^4.0.0"
   },
   "files": [
-    "index.js",
-    "lib/"
+    "index.js"
   ],
   "keywords": [],
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "standard": {
+    "ignore": [
+      "dist/**"
+    ]
   },
   "verb": {
     "run": true,
@@ -62,16 +63,27 @@
     "tasks": [
       "readme"
     ],
+    "related": {
+      "list": [
+        "always-done",
+        "minibase",
+        "try-catch-core"
+      ],
+      "highlight": "always-done"
+    },
     "lint": {
       "reflinks": true
-    },
-    "related": {
-      "list": []
-    },
-    "reflinks": [
-      "always-done",
-      "ava",
-      "tape"
-    ]
+    }
+  },
+  "engines": {
+    "node": ">=4.6",
+    "npm": ">=2"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "statements": 0,
+    "functions": 0,
+    "branches": 0,
+    "lines": 0
   }
 }
