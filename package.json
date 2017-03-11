@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "arrify": "^1.0.1",
+    "asap": "^2.0.5",
     "dush": "^2.0.2",
     "get-fn-name": "^1.0.0",
     "p-finally": "^1.0.0",

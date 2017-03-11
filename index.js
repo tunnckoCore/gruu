@@ -7,6 +7,7 @@
 
 'use strict'
 
+const asap = require('asap')
 const gruu = require('./api')
 const app = gruu()
 
@@ -20,11 +21,11 @@ function test (title, fn) {
   return test
 }
 
-setTimeout(function () {
+asap(function () {
   app.run().then(
     () => process.exit(0),
     () => process.exit(1)
   )
-}, 1)
+})
 
 module.exports = Object.assign(test, app)
