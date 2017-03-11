@@ -8,9 +8,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "lint": "standard *.js lib/*.js --fix --verbose",
+    "lint": "standard api.js index.js lib/utils.js lib/reporter.js --fix --verbose",
     "test": "npm-run-all -s lint test:*",
-    "test:api": "nyc --reporter lcov node test.js",
+    "test:api": "nyc node test.js",
     "test:report": "nyc report",
     "prerelease": "npm test",
     "release": "standard-version --sign --no-verify",
@@ -37,6 +37,10 @@
     "npm-run-all": "^4.0.1",
     "nyc": "^10.1.2",
     "pre-commit": "^1.2.2",
+    "rollup": "^0.41.5",
+    "rollup-plugin-buble": "^0.15.0",
+    "rollup-plugin-commonjs": "^8.0.0",
+    "rollup-plugin-node-resolve": "^2.0.0",
     "standard": "^9.0.0",
     "standard-version": "^4.0.0"
   },

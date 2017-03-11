@@ -10,21 +10,23 @@
 'use strict'
 
 // const test = require('mukla')
-const test = require('./index')/* ({ showStack: true }) */
-
+const gruu = require('./dist')/* ({ showStack: true }) */
+const app = gruu()
 const delay = require('delay')
 
-test('foo bar baz', function b (t) {
+app.add('foo bar baz', function b (t) {
   t.strictEqual(11, 11)
 })
 
-test('quxie setty', function a (t) {
+app.add('quxie setty', function a (t) {
   return delay(400).then(() => {
     // t.strictEqual(222, 444)
     t.strictEqual(222, 222)
   })
 })
 
-test('zeta gama', function s (t) {
+app.add('zeta gama', function s (t) {
   t.strictEqual(3, 3)
 })
+
+app.run()
