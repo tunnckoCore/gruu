@@ -12,12 +12,19 @@
 // const test = require('mukla')
 const test = require('./lib')/* ({ showStack: true }) */
 
-test('foo bar baz', (t) => {
-  t.strictEqual(222, 222, 'okkkey')
-  // console.log('hooo')
-  // t.strictEqual({ aaa: 'bbb'}, {
-  //   foo: 'bar'
-  // }, 'should be equal')
-  // t.end()
-  // console.log('actual')
+const delay = require('delay')
+
+test('foo bar baz', function b (t) {
+  t.strictEqual(11, 11)
+})
+
+test('quxie setty', function a (t) {
+  return delay(400).then(() => {
+    // t.strictEqual(222, 444)
+    t.strictEqual(222, 222)
+  })
+})
+
+test('zeta gama', function s (t) {
+  t.strictEqual(3, 3)
 })
