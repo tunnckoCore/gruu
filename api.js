@@ -8,10 +8,10 @@
 'use strict'
 
 const dush = require('dush')
-const utils = require('./utils')
+const utils = require('./lib/utils')
 const assert = require('assert')
 const getName = require('get-fn-name')
-let reporter = require('./reporter')
+let reporter = require('./lib/reporter')
 
 module.exports = function gruu (options) {
   const { on, off, once, emit } = dush()

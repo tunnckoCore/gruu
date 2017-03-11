@@ -10,7 +10,7 @@
 'use strict'
 
 // const test = require('mukla')
-const test = require('./lib')/* ({ showStack: true }) */
+const test = require('./index')/* ({ showStack: true }) */
 
 const delay = require('delay')
 

@@ -8,7 +8,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "lint": "standard index.js test.js --fix --verbose",
+    "lint": "standard *.js lib/*.js --fix --verbose",
     "test": "npm-run-all -s lint test:*",
     "test:api": "nyc --reporter lcov node test.js",
     "test:report": "nyc report",
@@ -40,7 +40,9 @@
     "standard-version": "^4.0.0"
   },
   "files": [
-    "index.js"
+    "api.js",
+    "index.js",
+    "lib/"
   ],
   "keywords": [],
   "config": {
